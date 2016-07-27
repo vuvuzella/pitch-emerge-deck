@@ -5,15 +5,15 @@
   "main": "emerge_deck.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a localhost -p 8000 -c-1 ./deck",
-
-    "postinstall" : "bower install"
-
+    "start": "node server.js",
+    "local": "http-server -a localhost -p 8000 -c-1 ./deck",
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bower": "^1.7.9",
+    "express": "^4.14.0",
     "http-server": "^0.9.0"
   }
 }
