@@ -1,0 +1,19 @@
+{
+  "name": "emerge_deck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "emerge_deck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 8000 -c-1 ./deck",
+
+    "postinstall" : "bower install"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.9.0"
+  }
+}
