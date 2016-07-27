@@ -23,7 +23,8 @@ window.onload = function() {
   });
 
   // socket.io
-  var socket = io.connect('http://localhost:5000');
+  // var socket = io.connect('http://localhost:5000');
+  var socket = io.connect();
 
   socket.on('message', function(data) {
     console.log(data);
