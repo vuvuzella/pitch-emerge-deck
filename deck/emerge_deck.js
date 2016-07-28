@@ -15,10 +15,6 @@ window.onload = function() {
           return !!document.querySelector('[data-markdown]');
         }
       }
-      // {
-      //   src: 'plugins/socket.io-client/socket.io.js',
-      //   async:  true
-      // }
     ]
   });
 
@@ -27,12 +23,12 @@ window.onload = function() {
   var socket = io.connect();
 
   socket.on('message', function(data) {
-    console.log(data);
-    socket.emit('message', 'Welcome from the Front');
+    // console.log(data);
+    // socket.emit('message', 'Welcome from the Front');
   });
 
   socket.on('slidechanged', function(data) {
-    console.log('server slidechanged received');
+    // console.log('server slidechanged received');
     Reveal.slide(data.indexh, data.indexv, data.indexf);
   });
 
@@ -43,7 +39,6 @@ window.onload = function() {
       indexf  : Reveal.getIndices().f || 0
     };
     socket.emit('slidechanged', data);
-    console.log(event);
   }
 
   Reveal.addEventListener('slidechanged', notifyServer);
