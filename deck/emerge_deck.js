@@ -41,7 +41,7 @@ window.onload = function() {
     socket.emit('slidechanged', data);
   }
 
-  Reveal.addEventListener('slidechanged', notifyServer);
-  Reveal.addEventListener('fragmentshown', notifyServer);
-  Reveal.addEventListener('fragmenthidden', notifyServer);
+  // Reveal.addEventListener('slidechanged', notifyServer);
+  // Reveal.addEventListener('fragmentshown', notifyServer);
+  // Reveal.addEventListener('fragmenthidden', notifyServer);
 };
